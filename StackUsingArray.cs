@@ -83,6 +83,23 @@ namespace StackAnalysis
             }
         }
 
+        public void displayStack(stack ptr)
+        {
+            int i = 0;
+            if(!IsEmpty(ptr))
+            {
+                while(i<ptr.size-1)
+                {
+                    Console.WriteLine("Element {0} ", ptr.arr[i]);
+                    i++;
+                }
+            }
+            else
+            {
+                Console.WriteLine("stack is empty");
+            }
+        }
+
         public int StackTop(stack ptr)
         {
             return ptr.arr[ptr.top];
