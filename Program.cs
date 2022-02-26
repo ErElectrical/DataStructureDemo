@@ -1,19 +1,21 @@
 ﻿using System;
 
-namespace ParentheisAnalysis
+namespace QueueAnalysis
 {
     public class Program
     {
         static void Main()
         {
-            stack s = new stack();
-            char[] arr = { '8', '*', '9', '(', '1', '+', '6', ')' };
-            StackUsingArray sa = new StackUsingArray();
-            sa.ParenthesisMatch(s, arr);
+            Queue q = new Queue();
+            q.size = 100;
+            q.front = -1;
+            q.rear = -1;
+            q.arr = new int[q.size];
 
-            char[] arrm = {'[', '8', '*', '9',']', '(', '1', '+', '6', ')' };
-            sa.MultipleParentheisMatching(s, arrm);
-
+            QueueImplementationonArray queue = new QueueImplementationonArray();
+            queue.enqueue(q, 345);
+            queue.enqueue(q, 56);
+            queue.QueueTraversal(q);
         }
     }
 }
