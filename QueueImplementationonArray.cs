@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace QueueAnalysis
 {
+    /// <summary>
+    /// Problem with simple queue is that once the front crosses any index we can not use that place further
+    /// even that place is empty after dequeue opreation still we can not able to use that place because 
+    /// enqueue always occur at rear side .
+    /// if length of our array is suppose 4 and we do first 4 enqueue opreation 
+    /// and after that we do 4 dequeue opreation 
+    /// now technically our queue is empty but it will show queue is full
+    /// because both front and rear pointer indexes are at same place.
+    /// </summary>
     public class Queue
     {
         public int size;
@@ -27,6 +36,7 @@ namespace QueueAnalysis
             {
                 ptr.rear++;
                 ptr.arr[ptr.rear] = val;
+                Console.WriteLine("Element inserted is : {0}", val);
             }
         }
 
@@ -84,10 +94,7 @@ namespace QueueAnalysis
                 {
                     Console.WriteLine("Element : {0} ", ptr.arr[i]);
                     i++;
-                    if(ptr.arr[i] == 0)
-                    {
-                        break;
-                    }
+                    
                 }
             }
         }
