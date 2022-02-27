@@ -1,18 +1,19 @@
 ﻿using System;
 
-namespace QueueAnalysisUsingLinkedList
+namespace SortingAlgorithumAnalysis
 {
     public class Program
     {
         static void Main()
         {
-            Node front = null;
-            Node rear = null;
-            QueueLinkedList queue = new QueueLinkedList();
-            queue.Enqueue(23);
-            queue.Enqueue(363);
-            Console.WriteLine("Element dequeue is : {0} ", queue.dequeue());
-            queue.QueueTraversal();
+            BubbleSortAnalysis sort = new BubbleSortAnalysis();
+
+            int[] arr = { 23, 43, 12, 4, 53, 1, 6 };
+            int[] ar = { 1, 2, 3, 4, 5 };
+            sort.ShowArray(ar);
+            sort.BubbleSort(ar);
+            sort.ShowArray(ar);
+
         }
     }
 }
