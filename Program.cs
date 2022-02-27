@@ -7,12 +7,16 @@ namespace SortingAlgorithumAnalysis
         static void Main()
         {
             BubbleSortAnalysis sort = new BubbleSortAnalysis();
+            InsertionSortAnalysis insertion = new InsertionSortAnalysis();
 
             int[] arr = { 23, 43, 12, 4, 53, 1, 6 };
-            int[] ar = { 1, 2, 3, 4, 5 };
-            sort.ShowArray(ar);
-            sort.BubbleSort(ar);
-            sort.ShowArray(ar);
+            // int[] ar = { 1, 2, 3, 4, 5 };
+            // BubbleSortAnalysis.ShowArray(ar);
+            // sort.BubbleSort(ar);
+            // BubbleSortAnalysis.ShowArray(ar);
+
+            insertion.InsertionSort(arr);
+            BubbleSortAnalysis.ShowArray(arr);
 
         }
     }
